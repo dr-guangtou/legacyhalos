@@ -67,7 +67,7 @@ def main():
             ref['pa'] = np.repeat(0.0, ngal).astype('f4') # fixed position angle
             ref['diam'] = np.repeat(10.0 / 60.0, ngal).astype('f4') # fixed diameter = 10 arcsec [arcmin]
 
-            reffile = os.path.join(basedir, 'legacyhsc-refcat.fits')
+            reffile = os.path.join(basedir, 'legacyhsc-demo-refcat.fits')
             kdreffile = reffile.replace('.fits', '.kd.fits')
             print('Writing {} galaxies to {}'.format(ngal, reffile))
 

@@ -6,7 +6,7 @@ project=legacyhsc-demo
 #############################
 # For a power-user / testing. Use local checkouts of the code even though it's
 # in the Docker container.
-export LEGACYPIPE_CODE_DIR=/global/homes/i/ioannis/repos/git/legacypipe
+export LEGACYPIPE_CODE_DIR=/global/homes/s/shuang89/code/legacypipe
 export LEGACYHALOS_CODE_DIR=/global/homes/s/shuang89/code/legacyhalos
 export PYTHONPATH=$LEGACYHALOS_CODE_DIR/py:$LEGACYPIPE_CODE_DIR/py:$PYTHONPATH
 export PATH=$LEGACYHALOS_CODE_DIR/bin/legacyhsc:$PATH
@@ -18,7 +18,7 @@ export LEGACYHALOS_HTML_DIR=/global/cscratch1/sd/shuang89/hsc/demo/html
 export LARGEGALAXIES_CAT=$LEGACYHALOS_DIR/legacyhsc-demo-refcat.kd.fits
 
 # Pipeline variables---only change these if you know what you're doing!
-export LEGACY_SURVEY_DIR=/global/cfs/cdirs/cosmo/work/legacysurvey/dr9
+export LEGACY_SURVEY_DIR=/global/cfs/cdirs/cosmo/data/legacysurvey/dr9
 export SKY_TEMPLATE_DIR=/global/cfs/cdirs/cosmo/data/legacysurvey/dr9/calib/sky_pattern
 
 export GAIA_CAT_VER=2
