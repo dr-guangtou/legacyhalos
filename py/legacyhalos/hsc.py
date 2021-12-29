@@ -41,7 +41,7 @@ def get_galaxy_galaxydir(cat, datadir=None, htmldir=None, html=False):
     if htmldir is None:
         htmldir = legacyhalos.io.legacyhalos_html_dir()
 
-    if not 'ID_S16A' in cat.colnames:
+    if not GALAXYCOLUMN in cat.colnames:
         # need to handle the lowz catalog
         print('Missing ID_S16A and NAME in catalog!')
         raise ValueError()
@@ -276,28 +276,12 @@ def read_sample(first=None, last=None, galaxylist=None, verbose=False):
     """
     cosmo = legacyhsc_cosmology()
     
-    # Hack for MUSE proposal
-    #samplefile = os.path.join(hdir, 's18a_z0.07_0.12_rcmod_18.5_etg_muse_massive_0313.fits')
-    
     # intermediate-z sample only
     samplefile = os.path.join(legacyhalos.io.legacyhalos_dir(), 's16a_massive_z_0.5_logm_11.4_decals_full_fdfc_bsm_ell.fits')
-    #samplefile = os.path.join(hdir, 's16a_massive_z_0.5_logm_11.4_dec_30_for_john.fits')
 
     # low-z sample only
     #samplefile = os.path.join(hdir, 'low-z-shape-for-john.fits')
 
-    # Investigate a subset of galaxies.
-    #cat1 = fitsio.read(os.path.join(hdir, 'hsc-sample-s16a-lowz.fits'), upper=True)
-    #cat2 = fitsio.read(os.path.join(hdir, 'DECaLS_negative_gal.fits'), upper=True)
-    #keep = np.isin(cat1['ID_S16A'], cat2['ID_S16A'])
-    #fitsio.write(os.path.join(hdir, 'temp-hsc-sample-s16a-lowz.fits'), cat1[keep], clobber=True)
-
-    # combined sample (see comment block above)
-    #if False:
-    #print('Temporary sample!!')
-    #samplefile = os.path.join(hdir, 'temp-hsc-sample-s16a-lowz.fits')
-    #samplefile = os.path.join(hdir, 'hsc-sample-s16a-lowz.fits')
-    
     if first and last:
         if first > last:
             print('Index first cannot be greater than index last, {} > {}'.format(first, last))
