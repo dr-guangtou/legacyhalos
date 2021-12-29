@@ -7,19 +7,15 @@ project=legacyhsc-demo
 # For a power-user / testing. Use local checkouts of the code even though it's
 # in the Docker container.
 export LEGACYPIPE_CODE_DIR=/global/homes/i/ioannis/repos/git/legacypipe
-export LEGACYHALOS_CODE_DIR=/global/homes/i/ioannis/repos/git/legacyhalos
+export LEGACYHALOS_CODE_DIR=/global/homes/s/shuang89/code/legacyhalos
 export PYTHONPATH=$LEGACYHALOS_CODE_DIR/py:$LEGACYPIPE_CODE_DIR/py:$PYTHONPATH
 export PATH=$LEGACYHALOS_CODE_DIR/bin/legacyhsc:$PATH
-#export PATH=$LEGACYHALOS_CODE_DIR/bin/$project:$PATH
-#############################
 
 # Specify the location of the input and output data.
-export LEGACYHALOS_DIR=/global/cfs/cdirs/desi/users/ioannis/legacyhalos/$project
-#export LEGACYHALOS_DATA_DIR=/global/cfs/cdirs/desi/users/ioannis/$project-data
-export LEGACYHALOS_DATA_DIR=/global/cscratch1/sd/ioannis/$project-data
-export LEGACYHALOS_HTML_DIR=/global/cfs/cdirs/cosmo/www/temp/ioannis/$project-html
-
-export LARGEGALAXIES_CAT=$LEGACYHALOS_DIR/legacyhsc-refcat.kd.fits
+export LEGACYHALOS_DIR=/global/cscratch1/sd/shuang89/hsc/demo/input
+export LEGACYHALOS_DATA_DIR=/global/cscratch1/sd/shuang89/hsc/demo/output
+export LEGACYHALOS_HTML_DIR=/global/cscratch1/sd/shuang89/hsc/demo/html
+export LARGEGALAXIES_CAT=$LEGACYHALOS_DIR/legacyhsc-demo-refcat.kd.fits
 
 # Pipeline variables---only change these if you know what you're doing!
 export LEGACY_SURVEY_DIR=/global/cfs/cdirs/cosmo/work/legacysurvey/dr9
